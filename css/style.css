@@ -846,7 +846,7 @@
 		}
 
 		.wrapper.style2 {
-			background: #ffffff;
+			background: white;
 			color: black;
 		}
 
@@ -977,6 +977,7 @@
 			}
 
 /* Banner */
+
 
 	#banner {
 		background-color: #666666;
