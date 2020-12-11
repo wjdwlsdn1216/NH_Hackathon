@@ -24,12 +24,42 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.5.2/bootbox.min.js"></script>
 		<script>
-			$(document).on("click", ".show", function (e) {
+			$(document).on("click", ".show1", function (e) {
 				bootbox.alert({
 					message: "물을 주었습니다!",
 					size: 'small'
 				});
 			});
+			$(document).on("click", ".show2", function (e) {
+				bootbox.alert({
+					message: "햇빛을 쬐었습니다!",
+					size: 'small'
+				});
+			});
+			$(document).on("click", ".show3", function (e) {
+				bootbox.alert({
+					message: "거름을 주었습니다!",
+					size: 'small'
+				});
+			});
+			$(document).on("click", ".show4", function (e) {
+				bootbox.alert({
+					message: "가지정리를 하였습니다!",
+					size: 'small'
+				});
+			});
+			// $(document).on("click", ".show5", function (e) {
+			// 	bootbox.alert({
+			// 		message: "물을 주었습니다!",
+			// 		size: 'small'
+			// 	});
+			// });
+			// $(document).on("click", ".show6", function (e) {
+			// 	bootbox.alert({
+			// 		message: "물을 주었습니다!",
+			// 		size: 'small'
+			// 	});
+			// });
 		</script>
 		<style>
 			.modal-content{
@@ -87,10 +117,10 @@
 						<div class="row">
                             <h2 style="text-align: center; margin: 20px;">상호 작용하기</h2>
                             <div>
-                                <button class="show" type="button" style="width: 130px; height: 35px; margin-bottom: 5px; background-color: #6c757d; color: white; font-size: 18px;">물주기</button>
-                                <button class="show-alert" type="button" style="width: 130px; height: 35px; margin-bottom: 5px; background-color: #6c757d; color: white; font-size: 18px;">햇빛</button>
-                                <button class="show-alert" type="button" style="width: 130px; height: 35px; margin-bottom: 5px; background-color: #6c757d; color: white; font-size: 18px;">거름주기</button>
-                                <button class="show-alert" type="button" style="width: 130px; height: 35px; margin-bottom: 5px; background-color: #6c757d; color: white; font-size: 18px;" >가지치기</button>
+                                <button class="show1" type="button" style="width: 130px; height: 35px; margin-bottom: 5px; background-color: #6c757d; color: white; font-size: 18px;">물주기</button>
+                                <button class="show2" type="button" style="width: 130px; height: 35px; margin-bottom: 5px; background-color: #6c757d; color: white; font-size: 18px;">햇빛</button>
+                                <button class="show3" type="button" style="width: 130px; height: 35px; margin-bottom: 5px; background-color: #6c757d; color: white; font-size: 18px;">거름주기</button>
+                                <button class="show4" type="button" style="width: 130px; height: 35px; margin-bottom: 5px; background-color: #6c757d; color: white; font-size: 18px;" >가지치기</button>
                                 <button class="show-alert" type="button" style="width: 265px; height: 35px; margin-bottom: 5px; background-color: #6c757d; color: white; font-size: 18px;">상호작용 기록보기</button>
                                 <button class="show-alert" type="button" style="width: 265px; height: 35px; margin-bottom: 5px; background-color: #6c757d; color: white; font-size: 18px;">재배정보 보기</button>
                             </div>
