@@ -21,6 +21,36 @@
 			<link rel="stylesheet" href="css/style.css" />
 			<link rel="stylesheet" href="css/style-xlarge.css" />
 		</noscript>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.5.2/bootbox.min.js"></script>
+		<script>
+			$(document).on("click", ".show-alert", function (e) {
+				bootbox.confirm({
+					message: "정말 결계하시겠습니까?",
+					buttons: {
+						confirm: {
+							label: '네',
+							className: 'btn-primary'
+						},
+						cancel: {
+							label: '아니요',
+							className: 'btn-secondary'
+						}
+					},
+				callback: function (result) {
+					console.log('This was logged in the callback: ' + result);
+				}
+				});
+			});
+		</script>
+		<style>
+			.modal-content{
+				position:absolute;
+				top:250px; 
+			}
+			.bootbox-close-button{
+				display: none;
+			}
+		</style>	
 	</head>
 	<body id="top">
 
@@ -32,6 +62,7 @@
 						<li><a href="index.html">홈</a></li>
 						<li><a href="검색.html">검색</a></li>
 						<li><a href="농장.html">농장</a></li>
+						<li><a href="delivery.html">배송</a></li>
 						<li><a href="계정.html">계정</a></li>
 						<li><a href="signup.html" class="button special">회원가입</a></li>
 						<li><a href="login.html" class="button special">로그인</a></li>
@@ -50,7 +81,7 @@
 					<div class="row">
 						<div class="6u">
 							<section class="special" style="border: 5px double grey; border-radius: 10px; box-shadow: 0px 0px 13px 3px rgba(134,132,130,0.8);">
-                                <img src="images/산마늘.jpg" alt="" class="image fit"/></a>
+								<img src="images/산마늘.jpg" alt="" class="image fit"/></a>
 								<div>
                                     <h2>산마늘</h2>
                                     <h5>가격 : 10000원 / 1팩 : 2000원</h5>
@@ -62,7 +93,7 @@
                         <div class="row">
                             <h2 style="text-align: center; margin: 20px;">상품설명</h2>
                             <p>
-								산마늘 맛좋은 산마늘이에요
+								맛좋은 산마늘이에요 아주 싱싱하죠 지금바로 키워보세요!
                             </p> 
 						</div>
 					</div>
@@ -71,8 +102,8 @@
 			<div class="container">
 				<div class="row" >
 					<div class="6u" style="margin-bottom: 15px;">
-						<button type="button" class="btn btn-secondary" style="width: 145px; font-size: 20px; margin-bottom: 10px;" onclick="alert('구매가 완료되었습니다!')">1팩 구매하기</button>
-						<button type="button" class="btn btn-secondary" style="width: 145px; font-size: 20px; margin-bottom: 10px;" onclick="location.href='홈_상품선택_구독하기.html'">구독하기</button>
+						<button type="button" class="show-alert" style="width: 145px; font-size: 20px; margin-bottom: 10px; background-color: #6c757d; color: white;">1팩 구매하기</button>
+						<button type="button" style="width: 145px; font-size: 20px; margin-bottom: 10px; background-color: #6c757d; color: white;" onclick="location.href='홈_상품선택_구독하기.html'">구독하기</button>
 					</div>
 				</div>
 			</div>
