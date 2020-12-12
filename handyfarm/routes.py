@@ -1,7 +1,7 @@
 import os
 import secrets
 from PIL import Image
-from flask import render_template, url_for, flash, redirect, request
+from flask import render_template, url_for, flash, redirect, request, jsonify
 from handyfarm import app, db, bcrypt
 from handyfarm.forms import RegistrationForm, LoginForm, UpdateAccountForm
 from handyfarm.models import User,Post
@@ -35,10 +35,36 @@ def home():
 def farm():
     return render_template('myfarm.html', title='myfarm') #전달해주는 인자
 
+@app.route("/item")
+def item():
+    return render_template('item.html', title='item') #전달해주는 인자
+
+@app.route('/ajax', methods=['POST'])
+def ajax():
+    data = request.get_json()
+    print(data)
+
+    return jsonify(result = "success", result2= data)
 
 @app.route("/delivery")
 def delivery():
     return render_template('delivery.html', title='delivery') #전달해주는 인자
+
+@app.route("/subscription")
+def subscription():
+    return render_template('subscription.html', title='subscription') #전달해주는 인자
+
+@app.route("/final_subscription")
+def final_subscription():
+    return render_template('final_subscription.html', title='final_subscription') #전달해주는 인자
+
+@app.route("/paypal")
+def paypal():
+    return render_template('paypal.html', title='paypal') #전달해주는 인자
+
+@app.route("/farm2")
+def farm2():
+    return render_template('farm2.html', title='farm2') #전달해주는 인자
 
 #회원가입
 @app.route("/register", methods=['GET', 'POST'])

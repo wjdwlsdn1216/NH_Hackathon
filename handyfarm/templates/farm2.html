@@ -1,0 +1,149 @@
+{% extends "layout.html" %}
+{% block head %}
+    {{ super() }}
+    <style>
+        .modal-content{
+            position:absolute;
+            top:250px;
+        }
+        .bootbox-close-button{
+            display: none;
+        }
+    </style>
+{% endblock head %}
+
+{% block content %}
+    <section id="two" class="wrapper style2">
+        <header class="major">
+            <h1>산마늘</h1>
+            <!-- <p>Amet nisi nunc lorem accumsan</p> -->
+        </header>
+        <div class="container">
+            <div class="row">
+                <div class="6u">
+                    <section class="special" style="border: 5px double grey; border-radius: 10px; box-shadow: 0px 0px 13px 3px rgba(134,132,130,0.8);">
+                        <!-- <img src="images/산마늘.jpg" alt="" class="image fit"/></a> -->
+                        <button type="button" class="btn btn-primary" onclick="init()">농작물보기</button>
+                        <div id="webcam-container"></div>
+                        <div id="label-container" style="display: none;"></div>
+                        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+                        <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+                        <script type="text/javascript">
+                            // More API functions here:
+                            // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
+
+                            // the link to your model provided by Teachable Machine export panel
+                            const URL = "https://teachablemachine.withgoogle.com/models/q6Mna-9vz/";
+
+                            let model, webcam, labelContainer, maxPredictions;
+
+                            // Load the image model and setup the webcam
+                            async function init() {
+                                const modelURL = URL + "model.json";
+                                const metadataURL = URL + "metadata.json";
+
+                                // load the model and metadata
+                                // Refer to tmImage.loadFromFiles() in the API to support files from a file picker
+                                // or files from your local hard drive
+                                // Note: the pose library adds "tmImage" object to your window (window.tmImage)
+                                model = await tmImage.load(modelURL, metadataURL);
+                                maxPredictions = model.getTotalClasses();
+
+                                // Convenience function to setup a webcam
+                                const flip = true; // whether to flip the webcam
+                                webcam = new tmImage.Webcam(200, 200, flip); // width, height, flip
+                                await webcam.setup(); // request access to the webcam
+                                await webcam.play();
+                                window.requestAnimationFrame(loop);
+
+                                // append elements to the DOM
+                                document.getElementById("webcam-container").appendChild(webcam.canvas);
+                                labelContainer = document.getElementById("label-container");
+                                for (let i = 0; i < maxPredictions; i++) { // and class labels
+                                    labelContainer.appendChild(document.createElement("div"));
+                                }
+                            }
+
+                            async function loop() {
+                                webcam.update(); // update the webcam frame
+                                await predict();
+                                window.requestAnimationFrame(loop);
+                            }
+
+                            // run the webcam image through the image model
+                            async function predict() {
+                                // predict can take in an image, video or canvas html element
+                                const prediction = await model.predict(webcam.canvas);
+                                for (let i = 0; i < maxPredictions; i++) {
+                                    const classPrediction =
+                                        prediction[i].className + ": " + prediction[i].probability.toFixed(2);
+                                    labelContainer.childNodes[i].innerHTML = classPrediction;
+                                }
+                            }
+                        </script>
+                        <div>
+                            <p>심은 날짜 : 20.08.11</p>
+                            <p>예상 수확 : 20.11.11</p>
+                            <div>
+                                <p>-온도 : 32C  -습도 : 15%</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="row">
+                    <h2 style="text-align: center; margin: 20px;">상호 작용하기</h2>
+                    <div>
+                        <button class="show1" type="button" style="width: 130px; height: 35px; margin-bottom: 5px; background-color: #6c757d; color: white; font-size: 18px;">물주기</button>
+                        <button class="show2" type="button" style="width: 130px; height: 35px; margin-bottom: 5px; background-color: #6c757d; color: white; font-size: 18px;">햇빛</button>
+                        <button class="show3" type="button" style="width: 130px; height: 35px; margin-bottom: 5px; background-color: #6c757d; color: white; font-size: 18px;">거름주기</button>
+                        <button class="show4" type="button" style="width: 130px; height: 35px; margin-bottom: 5px; background-color: #6c757d; color: white; font-size: 18px;" >가지치기</button>
+                        <button class="show-alert" type="button" style="width: 265px; height: 35px; margin-bottom: 5px; background-color: #6c757d; color: white; font-size: 18px;">상호작용 기록보기</button>
+                        <button class="show-alert" type="button" style="width: 265px; height: 35px; margin-bottom: 5px; background-color: #6c757d; color: white; font-size: 18px;">재배정보 보기</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+{% endblock content %}
+
+{% block box %}
+<script>
+    $(document).on("click", ".show1", function (e) {
+        bootbox.alert({
+            message: "물을 주었습니다!",
+            size: 'small',
+        });
+    });
+    $(document).on("click", ".show2", function (e) {
+        bootbox.alert({
+            message: "햇빛을 쬐었습니다!",
+            size: 'small'
+        });
+    });
+    $(document).on("click", ".show3", function (e) {
+        bootbox.alert({
+            message: "거름을 주었습니다!",
+            size: 'small'
+        });
+    });
+    $(document).on("click", ".show4", function (e) {
+        bootbox.alert({
+            message: "가지정리를 하였습니다!",
+            size: 'small'
+        });
+    });
+    // $(document).on("click", ".show5", function (e) {
+    // 	bootbox.alert({
+    // 		message: "물을 주었습니다!",
+    // 		size: 'small'
+    // 	});
+    // });
+    // $(document).on("click", ".show6", function (e) {
+    // 	bootbox.alert({
+    // 		message: "물을 주었습니다!",
+    // 		size: 'small'
+    // 	});
+    // });
+</script>
+{% endblock box %}
