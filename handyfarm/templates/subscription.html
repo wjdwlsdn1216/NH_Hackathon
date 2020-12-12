@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+{% block head %}
+    {{ supper }}
+    <style>
+        .modal-content{
+            position:absolute;
+            top:250px; 
+        }
+        .bootbox-close-button{
+            display: none;
+        }
+    </style>
+{% endblock head %}
+{% block content %}
+    <section id="two" class="wrapper style2">
+                    
+        <div class="container">
+            <div class="row">
+                <div class="6u">
+                    <section class="special" style="border: 5px double grey; border-radius: 10px; box-shadow: 0px 0px 13px 3px rgba(134,132,130,0.8);">
+                        <img src="../static/images/산마늘.jpg" alt="" class="image fit"/></a>
+                    </section>
+                </div>
+                <br>
+                <br>
+                <div class="row">
+                    <h2 style="text-align: center; margin: 20px;">산마늘</h2>
+                    <p>구독 기간 : 3개월</p>
+                    <p>기본 상호작용 횟수 : 1주일에 2번</p> 
+                    <p>수확 완료시 할인율 : 10%</p>
+                    <p>재도전시 할인율 : 20%</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container">
+        <div class="row" >
+            <div class="6u" >
+                <a href="{{ url_for('final_subscription') }}" class="button alt">34,000원 결제하기</a>
+            </div>
+        </div>
+    </div>
+ 
+{% endblock content %}
+{% block box %}
+<script>
+    $(document).on("click", ".show-alert", function (e) {
+        bootbox.confirm({
+            message: "정말 결제하시겠습니까?",
+            buttons: {
+                confirm: {
+                    label: '네',
+                    className: 'btn-primary'
+                },
+                cancel: {
+                    label: '아니요',
+                    className: 'btn-secondary'
+                }
+            },
+        callback: function (result) {
+            console.log('This was logged in the callback: ' + result);
+        }
+        });
+    });
+</script>
+{% endblock box %}

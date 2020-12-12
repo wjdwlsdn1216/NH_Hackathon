@@ -1,0 +1,102 @@
+{% extends "layout.html" %}
+{% block head %}
+    {{ super() }}
+    <style>
+        .modal-content{
+            position:absolute;
+            top:250px; 
+        }
+        .bootbox-close-button{
+            display: none;
+        }
+    </style>
+{% endblock head %}
+
+{% block content %}>
+        <br>
+        <br>
+        <br>
+			<div class="container">
+				<h1 style="font-weight: 1000; font-size: 19px;"> 원하는 구독버튼을 클릭하세요 </h1>
+			</div>
+			<br>
+			<div class="container">
+				<hr>
+			</div>
+			<section id="two" class="wrapper style2">
+				<div class="container">
+					<div class="row">
+						<div class="6u">
+							<section class="special"
+								style="border: 1px solid grey; border-radius: 10px; box-shadow: 0px 0px 5px 2px rgba(134,132,130,0.8);">
+								<button type="button" class="show-alert" style="width: 300px; height: 70px; background-color: rgb(231, 199, 158); border: 1px solid white; border-radius: 10px; box-shadow: 0px 0px 5px 2px rgba(134,132,130,0.8); font-weight: 1000; font-size: 30px; color: white;">베이직 29.700원</button>
+								<hr style="width: 145px; height: 5px; position: absolute; top: 205px; left: 160px; opacity: 1;">
+								<p style="font-size: 20px;">1달간 무료이용!!!</p>
+								<ul style="font-size: 20px;">
+									<li><p>사용기간 : 1개월</p></li>
+									<li><p>무료배송 : X</p></li>
+									<li><p>키워보기 : X</p></li>
+								</ul>
+							</section>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="two" class="wrapper style2">
+				<div class="container">
+					<div class="row">
+						<div class="6u">
+							<section class="special"
+								style="border: 1px solid grey; border-radius: 10px; box-shadow: 0px 0px 5px 2px rgba(134,132,130,0.8);">
+								<button type="button" class="show-alert" style="width: 300px; height: 70px; background-color: rgb(121, 192, 121); border: 1px solid white; border-radius: 10px; box-shadow: 0px 0px 5px 2px rgba(134,132,130,0.8); font-weight: 1000; font-size: 30px; color: white;">스탠다드 49,500원</button>
+								<ul style="font-size: 20px;">
+									<li><p>사용기간 : 1개월</p></li>
+									<li><p>무료배송 : O</p></li>
+									<li><p>키워보기 : X</p></li>
+								</ul>
+							</section>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="two" class="wrapper style2">
+				<div class="container">
+					<div class="row">
+						<div class="6u">
+							<section class="special"
+								style="border: 1px solid grey; border-radius: 10px; box-shadow: 0px 0px 5px 2px rgba(134,132,130,0.8);">
+								<button type="button" class="show-alert" style="width: 300px; height: 70px; background-color: rgb(245, 209, 4); border: 1px solid white; border-radius: 10px; box-shadow: 0px 0px 5px 2px rgba(134,132,130,0.8); font-weight: 1000; font-size: 30px; color: white;">프리미엄 99,000원</button>
+								<ul style="font-size: 20px;">
+									<li><p>사용기간 : 2개월</p></li>
+									<li><p>무료배송 : O</p></li>
+									<li><p>키워보기 : O</p></li>
+								</ul>
+							</section>
+						</div>
+					</div>
+				</div>
+			</section>
+{% endblock content %}
+
+{% block box %}
+<script>
+    $(document).on("click", ".show-alert", function (e) {
+        bootbox.confirm({
+            message: "정말 결제하시겠습니까?",
+            buttons: {
+                confirm: {
+                    label: '네',
+                    className: 'btn-primary'
+                },
+                cancel: {
+                    label: '아니요',
+                    className: 'btn-secondary'
+                }
+            },
+        callback: function (result) {
+            console.log('This was logged in the callback: ' + result);
+        }
+        });
+    });
+</script>
+{% endblock box %}
