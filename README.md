@@ -25,7 +25,7 @@ https://teachablemachine.withgoogle.com/
 농협몰 http://www.nonghyupmall.com/BC31010R/main.nh?basketCnt=0&cdnAplYn=Y \
 쿠팡 https://www.coupang.com/ \
 왓챠 https://watcha.com/ \
-무신사 https://www.musinsa.com/ \
+무신사 https://www.musinsa.com/ 
 
 
 
