@@ -22,12 +22,19 @@
 							<section class="special"
 								style="border: 1px solid grey; border-radius: 10px; box-shadow: 0px 0px 5px 2px rgba(134,132,130,0.8);">
 								<form method ="POST">
-                                    <button type="submit" class="btn btn-primary" style="width: 300px; height: 70px; background-color: #d1d1a8; border: 1px solid white; border-radius: 10px; box-shadow: 0px 0px 5px 2px rgba(134,132,130,0.8); font-weight: 1000; font-size: 30px; color: white;">베이직 29,700원</button>
-
-                                    <script> alert("{{ msg_1 }} {{ msg_2 }}")</script>
-                            
+        
+                                    <button type="submit" class="btn btn-primary" style="width: 300px; height: 70px; background-color: #d1d1a8; border: 1px solid white; border-radius: 10px; box-shadow: 0px 0px 5px 2px rgba(134,132,130,0.8); font-weight: 1000; font-size: 30px; color: white;">베이직 8,900원</button>
+                                    {%with messages = get_flashed_messages()%}
+                                    {%if messages %}
+                                      <script type="text/javascript">
+                                        alert("{{messages[-1]}}");
+                                      </script>
+                                      {%endif%}
+                                    {%endwith%}
+ 
                                 </form>
 									<p>사용기간 : 1개월</p>
+									<p>실시간 보기 : O</p>
 									<p>무료배송 : X</p>
 									<p>키워보기 : X</p>
 							</section>
@@ -41,9 +48,10 @@
 						<div class="6u">
 							<section class="special"
 								style="border: 1px solid grey; border-radius: 10px; box-shadow: 0px 0px 5px 2px rgba(134,132,130,0.8);">
-								<button type="button" class="show-alert" style="width: 300px; height: 70px; background-color: rgb(121, 192, 121); border: 1px solid white; border-radius: 10px; box-shadow: 0px 0px 5px 2px rgba(134,132,130,0.8); font-weight: 1000; font-size: 30px; color: white;">스탠다드 49,500원</button>
+								<button type="button" class="show-alert" style="width: 300px; height: 70px; background-color: rgb(121, 192, 121); border: 1px solid white; border-radius: 10px; box-shadow: 0px 0px 5px 2px rgba(134,132,130,0.8); font-weight: 1000; font-size: 30px; color: white;">스탠다드 14,500원</button>
 								<br>
 								<p>사용기간 : 1개월</p>
+								<p>실시간 보기 : O</p>
 								<p>무료배송 : O</p>
 								<p>키워보기 : X</p>
 							</section>
@@ -57,9 +65,10 @@
 						<div class="6u">
 							<section class="special"
 								style="border: 1px solid grey; border-radius: 10px; box-shadow: 0px 0px 5px 2px rgba(134,132,130,0.8);">
-								<button type="button" class="show-alert" style="width: 300px; height: 70px; background-color: rgb(245, 209, 4); border: 1px solid white; border-radius: 10px; box-shadow: 0px 0px 5px 2px rgba(134,132,130,0.8); font-weight: 1000; font-size: 30px; color: white;">프리미엄 99,000원</button>
+								<button type="button" class="show-alert" style="width: 300px; height: 70px; background-color: rgb(245, 209, 4); border: 1px solid white; border-radius: 10px; box-shadow: 0px 0px 5px 2px rgba(134,132,130,0.8); font-weight: 1000; font-size: 30px; color: white;">프리미엄 39,000원</button>
 								<br>
 								<p>사용기간 : 1개월</p>
+								<p>실시간 보기 : O</p>
 								<p>무료배송 : O</p>
 								<p>키워보기 : O</p>
 							</section>
