@@ -22,10 +22,10 @@ AI 모델 학습  \
 https://teachablemachine.withgoogle.com/
 
 # 웹/앱 디자인 벤치마크 
-농협몰 http://www.nonghyupmall.com/BC31010R/main.nh?basketCnt=0&cdnAplYn=Y
-쿠팡 https://www.coupang.com/
-왓챠 https://watcha.com/
-무신사 https://www.musinsa.com/
+농협몰 http://www.nonghyupmall.com/BC31010R/main.nh?basketCnt=0&cdnAplYn=Y \
+쿠팡 https://www.coupang.com/ \
+왓챠 https://watcha.com/ \
+무신사 https://www.musinsa.com/ \
 
 
 
