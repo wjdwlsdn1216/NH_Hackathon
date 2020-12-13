@@ -9,11 +9,11 @@
                 <div class="6u">
                     <section class="special" style="border: 5px double grey; border-radius: 10px; box-shadow: 0px 0px 13px 3px rgba(134,132,130,0.8);">
                         <img src="../static/images/산마늘.jpg" alt="" class="image fit"/></a>
+                        <h2 style="text-align: center; margin: 20px;">산마늘</h2>
                     </section>
                 </div>
                 <br>
                 <br>
-                    <h2 style="text-align: center; margin: 20px;">산마늘</h2>
                     <p>구독 기간 : 3개월</p>
                     <p>기본 상호작용 횟수 : 1주일에 2번</p> 
                     <p>수확 완료시 할인율 : 10%</p>
@@ -24,7 +24,7 @@
     <div class="container" style="text-align: center;">
         <div class="row">
             <div class="6u">
-                <a href="{{ url_for('final_subscription') }}" class="btn btn-white" style="font-size: 30px; margin-bottom: 10px; border-radius: 10px; background-color: rgb(160, 233, 196); color: white;">결제하기</a>
+                <button onclick=window.location.href="{{ url_for('final_subscription') }}" style="margin: auto; width: 40%; font-size: 20px; margin-bottom: 10px; border-radius: 10px; border-color: lavender; background-color: white; color: black;">결제하기</button>
             </div>
         </div>
     </div>

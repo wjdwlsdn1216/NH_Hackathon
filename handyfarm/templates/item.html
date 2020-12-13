@@ -25,15 +25,15 @@
             </div>
         </div>
     </section>
-    <div class="container">
-        <div class="row" >
-            <div class="6u" style="margin-bottom: 15px; text-align: center;">
-                <a href="{{ url_for('paypal') }}" class="btn btn-white" style="margin: auto; width: 145px; font-size: 30px; margin-bottom: 10px; border-radius: 10px; background-color: rgb(160, 233, 196); color: white;">1팩 구매하기</a>
-                <!-- <button type="button" style="width: 145px; font-size: 20px; margin-bottom: 10px; background-color: #6c757d; color: white;" href="{{ url_for('subscription') }}">구독하기</button> -->
-                <a href="{{ url_for('subscription') }}" class="btn btn-white" style="margin: auto; width: 145px; font-size: 30px; margin-bottom: 10px; border-radius: 10px; background-color: rgb(160, 233, 196); color: white;">구독하기</a>
+    <div class="container" style="text-align: center;">
+        <!-- <div class="row" > -->
+            <!-- <div class="6u" style="margin-bottom: 15px; text-align: center;"> -->
+                <button onclick=window.location.href="{{ url_for('paypal') }}" style="margin: auto; width: 40%; font-size: 19px; margin-bottom: 10px; border-radius: 10px; border-color: lavender; background-color: white; color: black;">1팩 구매하기</button>
+
+                <button onclick=window.location.href="{{ url_for('subscription') }}" style="margin: auto; width: 40%; font-size: 19px; margin-bottom: 10px; border-radius: 10px; border-color: lavender; background-color: white; color: black;">구독하기</button>
            
-            </div>
-        </div>
+            <!-- </div> -->
+        <!-- </div> -->
     </div>
 
 {% endblock content %}

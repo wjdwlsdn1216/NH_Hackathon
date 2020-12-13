@@ -366,10 +366,10 @@ def account():
 
 @app.route("/final_subscription", methods=['GET', 'POST'])
 def final_subscription():
-    Mes_1 = DrawingTransfer("20201213", "000723", "0076", "4d60bf5b7376fdca75b5a61080c2f5a3e55e21562757c12fad2ee736075f3d28", "00820100007230000000000004841", "29700", "베이직")
+    Mes_1 = DrawingTransfer("20201213", "000723", "0938", "4d60bf5b7376fdca75b5a61080c2f5a3e55e21562757c12fad2ee736075f3d28", "00820100007230000000000004841", "29700", "베이직")
     flash(Mes_1)
     msg_1=Mes_1
-    Mes_2 = InquireBalance("20201213", "000723", "0077", "4d60bf5b7376fdca75b5a61080c2f5a3e55e21562757c12fad2ee736075f3d28", "00820100007230000000000004841")
+    Mes_2 = InquireBalance("20201213", "000723", "0937", "4d60bf5b7376fdca75b5a61080c2f5a3e55e21562757c12fad2ee736075f3d28", "00820100007230000000000004841")
     msg_2="잔액" + Mes_2 + " 원 남았습니다"
     return render_template('final_subscription.html', title='final_subscription', msg_1=msg_1,msg_2=msg_2) #전달해주는 인자
 
