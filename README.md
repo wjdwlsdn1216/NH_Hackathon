@@ -9,19 +9,19 @@ https://github.com/rena2damas/remote-opencv-streaming-live-video
 https://github.com/miguelgrinberg/flask-video-streaming
 
 
-python으로 원격 컴퓨터 스트리밍
+python으로 원격 컴퓨터 스트리밍 \
 https://stackoverrun.com/ko/q/7996758
 
-python서버와 파이 카메라 연동
+python서버와 파이 카메라 연동 \
 https://neosarchizo.gitbooks.io/raspberrypiforsejonguniv/content/chapter5.html
 
-로컬 서버 외부 도메인 주소로 호스팅
+로컬 서버 외부 도메인 주소로 호스팅 \
 https://wow-gi.tistory.com/9
 
-AI 모델 학습 
+AI 모델 학습  \
 https://teachablemachine.withgoogle.com/
 
-# 웹/앱 디자인 벤치마크
+# 웹/앱 디자인 벤치마크 \
 농협몰 http://www.nonghyupmall.com/BC31010R/main.nh?basketCnt=0&cdnAplYn=Y
 쿠팡 https://www.coupang.com/
 왓챠 https://watcha.com/
