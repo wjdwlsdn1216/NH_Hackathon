@@ -12,6 +12,9 @@ https://drive.google.com/drive/folders/1VT_HApYw2n7r-bXhOswQIfkN4NpiGBAp?usp=sha
 <Yes24-e북>
 http://www.yes24.com/Mall/Main/eBook/017?CategoryNumber=017
 
+<광주인공지능사관학교>
+https://ai.gitct.kr
+
 ------
 
 
