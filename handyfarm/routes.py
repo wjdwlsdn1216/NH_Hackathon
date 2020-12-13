@@ -364,6 +364,7 @@ def account():
     image_file = url_for('static', filename='images/' + current_user.image_file)
     return render_template('account.html', title='Account', image_file=image_file, form = form)
 
+
 count = 2450
 @app.route("/final_subscription", methods=['GET', 'POST'])
 def final_subscription():
