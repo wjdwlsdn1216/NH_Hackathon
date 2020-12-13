@@ -1,13 +1,21 @@
 {% extends "layout.html" %}
 {%block content%}
+
 	<div class="container">
 		<div class="row">
 			<div class="6u">
+				<section id="banner">
+					<div class="inner">
+						<h2 style="font-weight:bold">손밭</h2>
+						
+					</div>
+				</section>
+				<br>
    				<section class="special"
 					style="border: 1px solid lavender; border-radius: 10px; box-shadow: 0px 0px 5px 2px rgba(134,132,130,0.8);">
 					<div>
 						<div>
-							<p style=" font-size: 20px; text-align:left; padding: 20px;">배송중 12/16(수) 도착예정
+							<p style=" color:#FFFFFF; font-weight:bold; font-size: 20px; text-align:left; padding: 20px;  background-color:#dddddd">배송중 12/16(수) 도착예정
 								<img src="../static/images/more.png" style="max-width: 25px;; position: absolute; left: 300px;">
 							</p>
 						</div>
@@ -28,24 +36,24 @@
 					</div>
 					<div style="display: flex; justify-content: space-around;">
 						<button type="button"
-							style="font-size: 20px; border-radius: 5px; border-color: lavender; background-color: #6c757d; color: white;">리뷰쓰기</button>
-						<button type="button"
-							style="font-size: 20px; border-radius: 5px; border-color: lavender; background-color: #6c757d; color: white;">재구매</button>
-						<button type="button"
-							style="font-size: 20px; border-radius: 5px; border-color: lavender; background-color: #6c757d; color: white;">배송조회</button>
+						style="font-size: 20px; border-radius: 5px; border-color: lavender; background-color: #a0e9c4; color: white;;">리뷰쓰기</button>
+					<button type="button"
+						style="font-size: 20px; border-radius: 5px; border-color: lavender; background-color: #a0e9c4; color: white;">재구매</button>
+					<button type="button" onclick="window.location.href='{{ url_for('paypal') }}'"
+						style="font-size: 20px; border-radius: 5px; border-color: lavender; background-color: #a0e9c4; color: white;">배송조회</button>
 					</div>
 					<div>
 						<h5></h5>
 					</div>
 				</section>
 			</div>
-			<br>
 			<div class="6u">
+				<br>
 				<section class="special"
 					style="border: 1px solid lavender; border-radius: 10px; box-shadow: 0px 0px 5px 2px rgba(134,132,130,0.8);">
 					<div>
 						<div>
-							<p style=" font-size: 20px; text-align:left; padding: 20px;">배송완료 12/05(수) 도착
+							<p style=" color:#FFFFFF; font-weight:bold; font-size: 20px; text-align:left; padding: 20px;  background-color:#dddddd">배송완료 12/05(수) 도착
 								<img src="../static/images/more.png" style="max-width: 25px;; position: absolute; left: 300px;">
 							</p>
 						</div>
@@ -66,11 +74,11 @@
 					</div>
 					<div style="display: flex; justify-content: space-around;">
 						<button type="button"
-							style="font-size: 20px; border-radius: 5px; border-color: lavender; background-color: #6c757d; color: white;;">리뷰쓰기</button>
+							style="font-size: 20px; border-radius: 5px; border-color: lavender; background-color: #a0e9c4; color: white;;">리뷰쓰기</button>
 						<button type="button"
-							style="font-size: 20px; border-radius: 5px; border-color: lavender; background-color: #6c757d; color: white;">재구매</button>
-						<button type="button"
-							style="font-size: 20px; border-radius: 5px; border-color: lavender; background-color: #6c757d; color: white;">배송조회</button>
+							style="font-size: 20px; border-radius: 5px; border-color: lavender; background-color: #a0e9c4; color: white;">재구매</button>
+						<button type="button" onclick="window.location.href='{{ url_for('paypal') }}'"
+							style="font-size: 20px; border-radius: 5px; border-color: lavender; background-color: #a0e9c4; color: white;">배송조회</button>
 					</div>
 					<div>
 						<h5></h5>
@@ -79,11 +87,12 @@
 			</div>
 			<br>
 			<div class="6u">
+				<br>
 				<section class="special"
 					style="border: 1px solid lavender; border-radius: 10px; box-shadow: 0px 0px 5px 2px rgba(134,132,130,0.8);">
 					<div>
 						<div>
-							<p style=" font-size: 20px; text-align:left; padding: 20px;">배송완료 12/05(수) 도착
+							<p style=" color:#FFFFFF; font-weight:bold; font-size: 20px; text-align:left; padding: 20px;  background-color:#dddddd">배송완료 12/05(수) 도착
 								<img src="../static//images/more.png" style="max-width: 25px;; position: absolute; left: 300px;">
 							</p>
 						</div>
@@ -103,11 +112,11 @@
 					</div>
 					<div style="display: flex; justify-content: space-around;">
 						<button type="button"
-							style="font-size: 20px; border-radius: 5px; border-color: lavender; background-color: #6c757d; color: white;">리뷰쓰기</button>
+							style="font-size: 20px; border-radius: 5px; border-color: lavender; background-color: #a0e9c4; color: white;">리뷰쓰기</button>
 						<button type="button"
-							style="font-size: 20px; border-radius: 5px; border-color: lavender; background-color: #6c757d; color: white;">재구매</button>
-						<button type="button"
-							style="font-size: 20px; border-radius: 5px; border-color: lavender; background-color: #6c757d; color: white;">배송조회</button>
+							style="font-size: 20px; border-radius: 5px; border-color: lavender; background-color: #a0e9c4; color: white;">재구매</button>
+						<button type="button" onclick="window.location.href='{{ url_for('paypal') }}'"
+							style="font-size: 20px; border-radius: 5px; border-color: lavender; background-color: #a0e9c4; color: white;">배송조회</button>
 					</div>
 					<div>
 						<h5></h5>

@@ -1,5 +1,7 @@
 {% extends "layout.html" %}
-
+	{% block head %}
+		
+	{% endblock head %}
 {%block content%}
 	<section id="banner">
 		<div class="inner">
@@ -35,7 +37,7 @@
 						<a class="image fit"><img src="../static/images/산마늘.jpg" style="max-height: 150px;" alt="" /></a>
 						<h2>산마늘</h2>
 						<ul class="actions">
-							<li><a href="홈_상품선택.html" class="button alt">구독하기</a></li>
+							<li><a href="{{ url_for('item') }}" class="btn btn-white" style="margin: auto; width: 80%; font-size: 30px; margin-bottom: 10px; border-radius: 10px; background-color: rgb(160, 233, 196); color: white;">구독하기</a></li>
 						</ul>
 					</section>
 				</div>
@@ -51,7 +53,7 @@
 						<a class="image fit"><img src="../static/images/당근.jpg" alt="" /></a>
 						<h2>당근</h2>
 						<ul class="actions">
-							<li><a href="{{ url_for('item') }}" class="button alt">구독하기</a></li>
+							<li><a href="{{ url_for('item') }}" class="btn btn-white" style="margin: auto; width: 80%; font-size: 30px; margin-bottom: 10px; border-radius: 10px; background-color: rgb(160, 233, 196); color: white;">구독하기</a></li>
 						</ul>
 					</section>
 				</div>
@@ -67,7 +69,7 @@
 						<a class="image fit"><img src="../static/images/허브.jpg" alt="" /></a>
 						<h2>허브</h2>
 						<ul class="actions">
-							<li><a href="홈_상품선택.html" class="button alt">구독하기</a></li>
+							<li><a href="{{ url_for('item') }}" class="btn btn-white" style="margin: auto; width: 80%; font-size: 30px; margin-bottom: 10px; border-radius: 10px; background-color: rgb(160, 233, 196); color: white;">구독하기</a></li>
 						</ul>
 					</section>
 				</div>
@@ -83,7 +85,7 @@
 						<a class="image fit"><img src="../static/images/비트.jpg" alt="" /></a>
 						<h2>비트</h2>
 						<ul class="actions">
-							<li><a href="홈_상품선택.html" class="button alt">구독하기</a></li>
+							<li><a href="{{ url_for('item') }}" class="btn btn-white" style="margin: auto; width: 80%; font-size: 30px; margin-bottom: 10px; border-radius: 10px; background-color: rgb(160, 233, 196); color: white;">구독하기</a></li>
 						</ul>
 					</section>
 				</div>
@@ -119,5 +121,25 @@
 			체험 후기(140개)
 			<a href="#" class="account manger" style="font-size: 16px; ">전체보기</a>
 		</p>
-	</article>	
+	</article>
+	<div class="container">
+		<p style="margin: 10px; font-weight: 800;">정진우<img src="../static/images/star.PNG" style="width: 50px; margin-top: 5px; margin-left: 5px;"></p>
+		<p style="margin: 10px; font-size: 13px;">실시간영상으로 보면서 키우다보니 재밌고 심지어 맛도 좋아요!</p>
+	</div>
+	<div class="container">
+		<p style="margin: 10px; font-weight: 800;">이민기<img src="../static/images/star.PNG" style="width: 50px; margin-top: 5px; margin-left: 5px;"></p>
+		<p style="margin: 10px; font-size: 13px;">ㅇㅇㅇㅇㅇㅇㅇ!</p>
+	</div>
+	<div class="container">
+		<p style="margin: 10px; font-weight: 800;">기원우<img src="../static/images/star.PNG" style="width: 50px; margin-top: 5px; margin-left: 5px;"></p>
+		<p style="margin: 10px; font-size: 13px;">ㅇㅇㅇㅇㅇㅇ!</p>
+	</div>
+	<div class="container">
+		<p style="margin: 10px; font-weight: 800;">고병표<img src="../static/images/star.PNG" style="width: 50px; margin-top: 5px; margin-left: 5px;"></p>
+		<p style="margin: 10px; font-size: 13px;">집앞에 있는 마트보다 더 맛있어요!</p>
+	</div>
+	<div class="container">
+		<p style="margin: 10px; font-weight: 800;">김민성<img src="../static/images/star.PNG" style="width: 50px; margin-top: 5px; margin-left: 5px;"></p>
+		<p style="margin: 10px; font-size: 13px;">ㅇㅇㅇㅇㅇㅇㅇ!</p>
+	</div>
 {% endblock %}

@@ -1,15 +1,6 @@
 {% extends "layout.html" %}
 {% block head %}
-    {{ super() }}
-    <style>
-        .modal-content{
-            position:absolute;
-            top:250px; 
-        }
-        .bootbox-close-button{
-            display: none;
-        }
-    </style>	
+	
 {% endblock head %}
 {% block content %}
     <section id="two" class="wrapper style2">
@@ -27,21 +18,19 @@
                 </div>
                 <br>
                 <br>
-                <div class="row">
                     <h2 style="text-align: center; margin: 20px;">상품설명</h2>
                     <p>
                         맛좋은 산마늘이에요 아주 싱싱하죠 지금바로 키워보세요!
                     </p> 
-                </div>
             </div>
         </div>
     </section>
     <div class="container">
         <div class="row" >
-            <div class="6u" style="margin-bottom: 15px;">
-                <a href="{{ url_for('paypal') }}" class="button alt">1팩 구매하기</a>
+            <div class="6u" style="margin-bottom: 15px; text-align: center;">
+                <a href="{{ url_for('paypal') }}" class="btn btn-white" style="margin: auto; width: 145px; font-size: 30px; margin-bottom: 10px; border-radius: 10px; background-color: rgb(160, 233, 196); color: white;">1팩 구매하기</a>
                 <!-- <button type="button" style="width: 145px; font-size: 20px; margin-bottom: 10px; background-color: #6c757d; color: white;" href="{{ url_for('subscription') }}">구독하기</button> -->
-                <a href="{{ url_for('subscription') }}" class="button alt">구독하기</a>
+                <a href="{{ url_for('subscription') }}" class="btn btn-white" style="margin: auto; width: 145px; font-size: 30px; margin-bottom: 10px; border-radius: 10px; background-color: rgb(160, 233, 196); color: white;">구독하기</a>
            
             </div>
         </div>

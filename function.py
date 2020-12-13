@@ -217,4 +217,4 @@ Insymd = "20201211"
 Ineymd = "20201212"
 #print(InquireTransactionHistory(Tsymd, Iscd, IsTuno, AccessToken, Bncd, Acno, Insymd, Ineymd))
 
-print(InquireBalance(Tsymd, Iscd, IsTuno, AccessToken, FinAcno))
+#print(InquireBalance(Tsymd, Iscd, IsTuno, AccessToken, FinAcno))

@@ -1,19 +1,9 @@
 {% extends "layout.html" %}
 {% block head %}
-    {{ supper }}
-    <style>
-        .modal-content{
-            position:absolute;
-            top:250px; 
-        }
-        .bootbox-close-button{
-            display: none;
-        }
-    </style>
+
 {% endblock head %}
 {% block content %}
     <section id="two" class="wrapper style2">
-                    
         <div class="container">
             <div class="row">
                 <div class="6u">
@@ -23,20 +13,18 @@
                 </div>
                 <br>
                 <br>
-                <div class="row">
                     <h2 style="text-align: center; margin: 20px;">산마늘</h2>
                     <p>구독 기간 : 3개월</p>
                     <p>기본 상호작용 횟수 : 1주일에 2번</p> 
                     <p>수확 완료시 할인율 : 10%</p>
                     <p>재도전시 할인율 : 20%</p>
-                </div>
             </div>
         </div>
     </section>
-    <div class="container">
-        <div class="row" >
-            <div class="6u" >
-                <a href="{{ url_for('final_subscription') }}" class="button alt">34,000원 결제하기</a>
+    <div class="container" style="text-align: center;">
+        <div class="row">
+            <div class="6u">
+                <a href="{{ url_for('final_subscription') }}" class="btn btn-white" style="font-size: 30px; margin-bottom: 10px; border-radius: 10px; background-color: rgb(160, 233, 196); color: white;">결제하기</a>
             </div>
         </div>
     </div>

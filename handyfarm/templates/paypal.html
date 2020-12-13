@@ -1,6 +1,5 @@
 {% extends "layout.html" %}
 {% block head %}
-    {{ super }}
     <style>
         .modal-content{
             position:absolute;
@@ -12,26 +11,20 @@
     </style>
 {% endblock head %}
 {% block content %}
-    <br>
-    <br>
-    <br>
-    <div class="container">
-        <h1 style="font-weight: 1000; font-size: 19px;">주문지 / 결제</h1>
+<section id="banner">
+    <div class="inner">
+        <h2 style="font-weight:bold">주문지 / 결제</h2>
     </div>
-    <br>
-    <div class="container">
-        <hr>
-    </div>
+</section>
     <section id="two" class="wrapper style2">
         <div class="container">
             <div class="row">
                 <div class="6u">
                     <section class="special"
                         style="border: 1px solid grey; border-radius: 10px; box-shadow: 0px 0px 5px 2px rgba(134,132,130,0.8); background-color: #f1f1f1;">
-                        <h2 style="text-align: left; margin: 10px; font-weight: 1000;">배송지</h2>
-                        <hr>
+                        <p style="text-align: left; margin: 10px; font-weight: 1000;background-color:#dddddd" >배송지</p>
                         <p style="text-align: left; margin: 10px; font-style: unset;">주소 : 광주광역시 남구 봉선동 한국아델리움 102동 801호</p>
-                        <img src="../static/images/r_arrow.png" style="position: absolute; top: 275px; left: 300px;">
+                        <img src="../static/images/r_arrow.png" style="position: absolute; top: 300px; left: 300px;">
                         <p style="text-align: left; margin: 10px; font-style: unset;">휴대폰 : 010-3393-2949</p>
                     </section>
                 </div>
@@ -45,9 +38,8 @@
                     <section class="special"
                         style="border: 1px solid grey; border-radius: 10px; box-shadow: 0px 0px 5px 2px rgba(134,132,130,0.8); background-color: #f1f1f1;">
                         <h2 style="text-align: left; margin: 10px; font-weight: 1000;">배송 요청사항</h2>
-                        <hr>
                         <p style="text-align: left; margin: 10px; font-style: unset;">문앞에 두고 가주세요</p>
-                        <img src="../static/images/r_arrow.png" style="position: absolute; top: 445px; left: 300px;">
+                        <img src="../static/images/r_arrow.png" style="position: absolute; top: 470px; left: 300px;">
                     </section>
                 </div>
             </div>
@@ -60,9 +52,8 @@
                     <section class="special"
                         style="border: 1px solid grey; border-radius: 10px; box-shadow: 0px 0px 5px 2px rgba(134,132,130,0.8); background-color: #f1f1f1;">
                         <h2 style="text-align: left; margin: 10px; font-weight: 1000;">결제수단</h2>
-                        <hr>
                         <p style="text-align: left; margin: 10px; font-style: unset;">카카오페이 머니</p>
-                        <img src="../static/images/r_arrow.png" style="position: absolute; top: 595px; left: 300px;">
+                        <img src="../static/images/r_arrow.png" style="position: absolute; top: 620px; left: 300px;">
                     </section>
                 </div>
             </div>
@@ -75,9 +66,8 @@
                     <section class="special"
                         style="border: 1px solid grey; border-radius: 10px; box-shadow: 0px 0px 5px 2px rgba(134,132,130,0.8); background-color: #f1f1f1;">
                         <h2 style="text-align: left; margin: 10px; font-weight: 1000;">현금영수증</h2>
-                        <hr>
                         <p style="text-align: left; margin: 10px; font-style: unset;">010-3393-2949 (소득 공제)</p>
-                        <img src="../static/images/r_arrow.png" style="position: absolute; top: 750px; left: 300px;">
+                        <img src="../static/images/r_arrow.png" style="position: absolute; top: 780px; left: 300px;">
                     </section>
                 </div>
             </div>
@@ -85,25 +75,3 @@
     </section>
 
 {% endblock content %}
-{% block box %}
-<script>
-    $(document).on("click", ".show-alert", function (e) {
-        bootbox.confirm({
-            message: "정말 결제하시겠습니까?",
-            buttons: {
-                confirm: {
-                    label: '네',
-                    className: 'btn-primary'
-                },
-                cancel: {
-                    label: '아니요',
-                    className: 'btn-secondary'
-                }
-            },
-        callback: function (result) {
-            console.log('This was logged in the callback: ' + result);
-        }
-        });
-    });
-</script>
-{% endblock box %}
