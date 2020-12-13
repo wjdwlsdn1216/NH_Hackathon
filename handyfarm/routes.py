@@ -133,7 +133,7 @@ def DrawingTransfer(Tsymd, Iscd, IsTuno, AccessToken, FinAcno, Tram, DractOtlt):
         x.setdefault(z[i],z[i+1])
 
     if x["Rsms"] == "정상처리":
-        return "정상처리 되었습니다"
+        return ""
     else:
         return "오류 발생"
 
@@ -364,18 +364,17 @@ def account():
     image_file = url_for('static', filename='images/' + current_user.image_file)
     return render_template('account.html', title='Account', image_file=image_file, form = form)
 
+count = 2200
 @app.route("/final_subscription", methods=['GET', 'POST'])
 def final_subscription():
-    Mes_1 = DrawingTransfer("20201213", "000723", "0938", "4d60bf5b7376fdca75b5a61080c2f5a3e55e21562757c12fad2ee736075f3d28", "00820100007230000000000004841", "29700", "베이직")
+    global count
+    str_count = str(count).zfill(4)
+    Mes_1 = DrawingTransfer("20201213", "000723", str_count, "4d60bf5b7376fdca75b5a61080c2f5a3e55e21562757c12fad2ee736075f3d28", "00820100007230000000000004841", "29700", "베이직")
+    count += 1
     flash(Mes_1)
     msg_1=Mes_1
-    Mes_2 = InquireBalance("20201213", "000723", "0937", "4d60bf5b7376fdca75b5a61080c2f5a3e55e21562757c12fad2ee736075f3d28", "00820100007230000000000004841")
+    str_count = str(count).zfill(4)
+    Mes_2 = InquireBalance("20201213", "000723", str_count, "4d60bf5b7376fdca75b5a61080c2f5a3e55e21562757c12fad2ee736075f3d28", "00820100007230000000000004841")
+    count += 1
     msg_2="잔액" + Mes_2 + " 원 남았습니다"
     return render_template('final_subscription.html', title='final_subscription', msg_1=msg_1,msg_2=msg_2) #전달해주는 인자
-
-
-
-
-
-
-
