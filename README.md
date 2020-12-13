@@ -2,6 +2,19 @@
 내 손안에서 씨앗부터 재배까지 모든 순간을 디지털로 체험하는 구독형 스마트팜 서비스 
 
 
+
+<구글밋>
+https://meet.google.com/qry-pvxm-mbu
+
+<구글드라이브>
+https://drive.google.com/drive/folders/1VT_HApYw2n7r-bXhOswQIfkN4NpiGBAp?usp=sharing
+
+<Yes24-e북>
+http://www.yes24.com/Mall/Main/eBook/017?CategoryNumber=017
+
+------
+
+
 # 참고 자료 
 
 Flask로 원격 스트리밍 라이브 비디오 \
